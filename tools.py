@@ -15,6 +15,10 @@ current_enemy = Enemy(
     "Goblini", **enemy_templates["goblin"]
 )
 
+GAME_WORLD = {
+    "npcs": {}
+}
+
 def typewriter(text: str, delay: float = 0.04):
     """Tulostaa tekstin kirjain kerrallaan näyttävästi."""
     for char in text:
@@ -22,6 +26,44 @@ def typewriter(text: str, delay: float = 0.04):
         time.sleep(delay)
     print()  # Rivinvaihto lopuksi
     time.sleep(1)
+
+# ------------------- CREATING NPC -------------------
+
+def create_npc(name: str, role: str, description: str, location: str):
+    """
+    Creates an NPC object and stores it in the global GAME_WORLD.
+    This is called via AI tool invocation.
+    """
+
+    npc = {
+        "name": name,
+        "role": role,
+        "description": description,
+        "location": location,
+        "dialogue_history": []
+    }
+
+    GAME_WORLD["npcs"][name] = npc
+
+    return {
+        "status": "npc_created",
+        "npc": npc
+}
+
+create_npc_function = {
+    "name": "create_npc",
+    "description": "Create a new NPC and add it to the game world. Use this whenever the player meets a new character.",
+    "parameters": {
+        "type": "object",
+        "properties": {
+            "name": {"type": "string", "description": "NPC name"},
+            "role": {"type": "string", "description": "NPC's social role or job"},
+            "description": {"type": "string", "description": "Short description of personality and appearance"},
+            "location": {"type": "string", "description": "Where the NPC currently is"}
+        },
+        "required": ["name", "role", "description", "location"]
+    }
+}
 
 # ------------------- ATTACKING -------------------
 
