@@ -12,7 +12,7 @@ while True:
     config = types.GenerateContentConfig(tools=[tools])
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
+        model="gemini-2.5-flash",
         contents=prompt,
         config=config
     )

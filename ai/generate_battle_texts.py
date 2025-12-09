@@ -44,7 +44,7 @@ Selostuksessasi vihollinen ei hyökkää tässä vuorossa, mutta voi puolustautu
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
+        model="gemini-2.5-flash",
         contents=prompt
     )
 
@@ -93,7 +93,7 @@ Selostuksessasi pelaaja ei hyökkää tässä vuorossa, mutta voi puolustautua.
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash-lite",
+        model="gemini-2.5-flash",
         contents=prompt
     )
 

@@ -205,10 +205,12 @@ available_functions = {
     "attack_enemy": attack_enemy,
     "get_inventory": get_inventory,
     "get_specific_item": get_specific_item,
+    "create_npc": create_npc,
 }
 
 tool_declarations = [
     specific_item_function,
     inventory_function,
     attack_function,
+    create_npc_function
 ]
