@@ -33,4 +33,6 @@ Pelin pelaaminen:
 Erityisesti hyökätessä kannattaa käyttää juuri sitä nimitystä mikä game_data.py tiedostossa on.
 Esim. "Hyökkään axella", tai "Aloitan taistelun orcin kanssa"
 
-Peli ei mekaanisesti pääty ollenkaan, edes pelaajan kuollessa. Jos pelaaja kuolee, kannataa peli itse lopettaa "CTRL + C". Peliä ei voi "voittaa" eikä siinä ole juurikaan tarinaa toistaiseksi, vain vähän alkuun johdattavaa toimintaa. Peli keksii itse suhteellisen hyvin omaa tarinaa ja on aina erilainen, itse esimerkiksi löysin metsästä haltijan nimeltä Elara, joka lähetti minut tehtävälle örkkijahtiin. Tässä piti toki hieman itsekkin mielikuvitusta käyttää, eräässä promptissa esimerkiksi sanoin että "Näen metsän keskellä vanhan mökin, menen tutkimaan lähempää".
+Pelissä ei varsinaisesti ole mitään tavoitetta, eikä sitä voi "voittaa". Pelissä ei ole myöskään juurikaan ennalta määrättyä tarinaa, vain vähän alkuun johdattavaa toimintaa. Peli keksii itse suhteellisen hyvin omaa tarinaa ja on aina erilainen (riippuen toki pelaajan toimintatavoista). Itse esimerkiksi löysin metsästä haltijan nimeltä Elara, joka lähetti minut tehtävälle örkkijahtiin. Tässä piti toki hieman itsekkin mielikuvitusta käyttää, eräässä promptissa esimerkiksi sanoin että "Näen metsän keskellä vanhan mökin, menen tutkimaan lähempää".
+
+Peli ei mekaanisesti pääty ollenkaan, edes pelaajan kuollessa. Jos pelaaja kuolee, kannataa peli itse lopettaa "CTRL + C". Peli ei myöskään tallenna itseään ja se kaatuu välillä ylikuormituksen tai vaikean promptin takia, peli tulee siis aloittaa alusta.
