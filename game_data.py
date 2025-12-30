@@ -1,5 +1,5 @@
 inventory = {
-    "axe": {"damage": 10, "durability": 10},
+    "axe": {"damage": 5, "durability": 10},
     "health potion": {
         "heal": 10,
         "quantity": 2
@@ -7,9 +7,9 @@ inventory = {
 }
 
 enemy_templates = {
-    "goblin": {"health" : 10, "damage" : 3, "ac" : 1},
-    "skeleton": {"health": 12, "damage": 5, "ac": 1},
-    "orc": {"health": 20, "damage" : 6, "ac" : 1}
+    "goblin": {"health" : 10, "damage" : 3, "ac" : 8},
+    "skeleton": {"health": 12, "damage": 5, "ac": 10},
+    "orc": {"health": 20, "damage" : 6, "ac" : 12}
 }
 
 enemy_descriptions = {
@@ -29,9 +29,6 @@ enemy_descriptions = {
         "combat_style": "Niiden hyökkäykset ovat brutaaleja ja suoria, täynnä raakaa voimaa.",
     },
 }
-
-
-
 
 player_start_stats = {
     "name": "Eivor",
