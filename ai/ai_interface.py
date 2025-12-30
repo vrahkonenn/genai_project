@@ -1,18 +1,16 @@
 from google import genai
 from google.genai import types
 
-from tools import available_functions, tool_declarations
-
 client = genai.Client()
 
-def ask_ai(prompt: str, tools=False, model: str = "gemini-2.5-flash"):
+def ask_ai(prompt: str, tools=False, model: str = "gemini-2.5-flash-lite"):
 
     if tools == True:
         tools = types.Tool(function_declarations=tool_declarations)
         config = types.GenerateContentConfig(tools=[tools])
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-2.5-flash-lite",
             contents=prompt,
             config=config
         )

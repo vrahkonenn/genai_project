@@ -8,3 +8,7 @@ Tekoälylle on asetettu erilaisia tooleja, jotka rajoittavat pelaajan pelaamista
 esim. move_to() toolia, jonka avulla tarkastetaan onko paikka jonne pelaaja haluaa liikkua pelialueella. (Täten pelaaja ei voi tehdä luonnottomia toimia, kuten lentää avaruuteen)
 
 Pelaajan promptit ja tekoälyn vastaukset tallennetaan tiedostoon, jota tekoäly seuraa ja täten "muistaa" aiemmat keskustelun ja pelin nykytilanteen 
+
+Asennus:
+1. Hanki itsellesi Google AI Studion api key: https://aistudio.google.com/app/api-keys
+2. Luo itsellesi omiin tilin ympäristömuuttujiin uusi muuttuja "GOOGLE_API_KEY", aseta arvoksi juuri tekemäsi api-key

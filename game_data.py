@@ -1,13 +1,15 @@
 inventory = {
-    "axe": {"damage": 5, "durability": 10},
-    "sword": {"damage": 4, "durability": 15},
-    "dagger": {"damage" : 2, "durability" : 20}
+    "axe": {"damage": 10, "durability": 10},
+    "health potion": {
+        "heal": 10,
+        "quantity": 2
+    }
 }
 
 enemy_templates = {
-    "goblin": {"health" : 10, "damage" : 3, "ac" : 8},
-    "skeleton": {"health": 12, "damage": 3, "ac": 9},
-    "orc": {"health": 20, "damage" : 4, "ac" : 10}
+    "goblin": {"health" : 10, "damage" : 3, "ac" : 1},
+    "skeleton": {"health": 12, "damage": 5, "ac": 1},
+    "orc": {"health": 20, "damage" : 6, "ac" : 1}
 }
 
 enemy_descriptions = {
@@ -27,6 +29,8 @@ enemy_descriptions = {
         "combat_style": "Niiden hyökkäykset ovat brutaaleja ja suoria, täynnä raakaa voimaa.",
     },
 }
+
+
 
 
 player_start_stats = {

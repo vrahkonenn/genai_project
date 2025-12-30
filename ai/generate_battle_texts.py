@@ -44,14 +44,14 @@ Selostuksessasi vihollinen ei hyökkää tässä vuorossa, mutta voi puolustautu
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-flash-lite",
         contents=prompt
     )
 
     return response.text
 
 
-def generate_enemy_battle_text(attacker, target, target_health, roll, hit, damage, dies, battle_state):
+def generate_enemy_battle_text(attacker, target, target_health, roll, hit, damage, dies, battle_state, event_type):
     client = genai.Client()
 
     desc = enemy_descriptions.get(attacker.lower(), {})
@@ -82,6 +82,7 @@ Tiedot:
 - Osuma onnistui: {"Kyllä" if hit else "Ei"}
 - Damage: {damage}
 - Kuoleeko kohde: {"Kyllä" if dies else "Ei"}
+- Hyökkäys on tyyliltään: {event_type}
 
 Kirjoita tarinallinen kuvaus siitä, miten vihollinen hyökkää.
 Älä mainitse numeroita tai roll-arvoja, kuvaile vain tapahtuma.
@@ -89,11 +90,12 @@ Jos huti, kuvaile miten pelaaja väistää tai torjuu.
 Jos roll on 20 niin isku on kriittinen ja kuvaile todella eeppisesti iskua.
 Jos roll on 1 niin isku on todella surkea ja hyökkääjä itse kärsii iskusta, kuvaile hyökkääjän epäonnistumista.
 Jos kohde kuolee, kuvaile todella dramaattinen kuolema.
+Jos hyökkäys on flee_attack, pelaaja juoksee karkuun ja kuvaile miten hyökkääjä yrittää tehdä viimeisen hyökkäyksen, jonka jälkeen taistelu päättyy kun pelaaja pakenee tai kuolee.
 Selostuksessasi pelaaja ei hyökkää tässä vuorossa, mutta voi puolustautua.
 """
 
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-2.5-flash-lite",
         contents=prompt
     )
 
