@@ -19,7 +19,7 @@ current_enemy = Enemy(
 '''
 
 
-def typewriter(text: str, delay: float = 0.01):
+def typewriter(text: str, delay: float = 0.04):
     """Tulostaa tekstin kirjain kerrallaan näyttävästi."""
     for char in text:
         print(char, end="", flush=True)
